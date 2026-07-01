@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (large)
+data/coco/
+data/coco_mini/
+data/casia2/CASIA2.0_revised/
+data/columbia/ImSpliceDataset/
+data/aigc_test/
+
+# Models (large)
+weights/*.pth
+
+# Logs
+logs/
+
+# Results (keep directory but ignore large files)
+results/figures/*.png
+
+# LaTeX aux
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.dvi
+
+# Temp
+tmp/
+temp/
+*.tmp
+
+# CVPR LaTeX template (not related to AAAI submission)
+cvpr-latex模版/
+cvpr-latex-官方2026/
+
+# AAAI submission materials - exclude paper drafts (may contain author info)
+aaai-latex/main.pdf
+aaai-latex/*.pdf
+
+# Presentation (contains identifying info)
+*组会汇报*.pptx
+*组会汇报*.pdf

@@ -65,3 +65,8 @@ aaai-latex/*.pdf
 # Presentation (contains identifying info)
 *组会汇报*.pptx
 *组会汇报*.pdf
+
+# Plans and prompts (project-specific, not for public repo)
+*提示词*
+*PLAN.md
+*投稿计划*

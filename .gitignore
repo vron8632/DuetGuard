@@ -59,8 +59,9 @@ cvpr-latex模版/
 cvpr-latex-官方2026/
 
 # AAAI submission materials - exclude paper drafts (may contain author info)
-aaai-latex/main.pdf
-aaai-latex/*.pdf
+aaai-latex/
+AAAI-AuthorKit27/
+AuthorKit27.zip
 
 # Presentation (contains identifying info)
 *组会汇报*.pptx
@@ -70,3 +71,29 @@ aaai-latex/*.pdf
 *提示词*
 *PLAN.md
 *投稿计划*
+
+# Paper drafts and references
+*.pdf
+*.zip
+*.psd
+*.html
+
+# LaTeX paper source (not for public repo)
+aaai-duetguard/
+cvpr-duetguard/
+cvpr-duetguard.zip
+
+# Skills and tooling (not part of the project)
+AI-Research-SKILLs/
+academic-research-skills/
+paper-craft-skills/
+.skills/
+.reasonix/
+.codegraph/
+
+# Review materials (contains personal opinions)
+review/
+review_report*.md
+
+# Project planning (not for public repo)
+make_pptx.py

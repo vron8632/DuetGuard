@@ -1,0 +1,82 @@
+{
+  "P0-1_expanded_eval": {
+    "samples": 4000,
+    "accuracy_pct": 99.38,
+    "correct": 3975,
+    "ci_95_lo_pct": 99.08,
+    "ci_95_hi_pct": 99.58,
+    "margin_pct": 0.25,
+    "confusion_matrix": [
+      [
+        1996.0,
+        0.0,
+        4.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        21.0,
+        0.0,
+        1979.0
+      ]
+    ]
+  },
+  "P1-1_zero_shot": {
+    "AIGC": {
+      "accuracy": 50.0,
+      "samples": 400,
+      "confusion": [
+        [
+          200.0,
+          0.0
+        ],
+        [
+          200.0,
+          0.0
+        ]
+      ]
+    },
+    "Columbia": {
+      "accuracy": 50.56910569105691,
+      "samples": 1845,
+      "confusion": [
+        [
+          933.0,
+          0.0
+        ],
+        [
+          912.0,
+          0.0
+        ]
+      ]
+    },
+    "CASIAv2": {
+      "accuracy": 78.0338911693506,
+      "samples": 9501,
+      "confusion": [
+        [
+          7403.0,
+          34.0
+        ],
+        [
+          2053.0,
+          11.0
+        ]
+      ]
+    }
+  },
+  "P1-2_robustness_strong_attacks": {
+    "Clean": 99.0,
+    "JPEG q=70": 83.0,
+    "JPEG q=50": 78.5,
+    "JPEG q=30": 75.5,
+    "JPEG q=15": 53.5,
+    "Noise \u03c3=0.01": 99.8,
+    "Noise \u03c3=0.05": 87.0,
+    "Noise \u03c3=0.10": 76.2,
+    "Noise \u03c3=0.20": 64.2
+  }
+}

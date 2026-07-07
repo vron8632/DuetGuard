@@ -35,8 +35,6 @@ weights/*.pth
 # Logs
 logs/
 
-# Results (keep directory but ignore large files)
-results/figures/*.png
 
 # LaTeX aux
 *.aux
@@ -57,6 +55,9 @@ temp/
 # CVPR LaTeX template (not related to AAAI submission)
 cvpr-latex模版/
 cvpr-latex-官方2026/
+
+# Track result figures
+!results/figures/*.png
 
 # AAAI submission materials - exclude paper drafts (may contain author info)
 aaai-latex/

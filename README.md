@@ -8,10 +8,37 @@
 
 <p align="center">
   <a href="#-overview">Overview</a> •
+  <a href="#-datasets">Datasets</a> •
   <a href="#-quick-start">Quick Start</a> •
   <a href="#-results">Results</a> •
   <a href="#-repository-structure">Structure</a>
 </p>
+
+---
+
+## 📦 Datasets
+
+All datasets used in the paper are available at:  
+**Baidu NetDisk:** https://pan.baidu.com/s/1tWSeEi1dOG7oZjLSguI0Xw  
+**Extraction code:** `bkww`
+
+| Content | Description |
+|---------|-------------|
+| `aigc_test/` | AIGC-generated test set (SD Inpaint) |
+| `casia2/` | CASIA v2 forensic benchmark (splicing, copy-move) |
+| `coco_mini/` | COCO 2017 subset for training |
+| `columbia/` | Columbia splicing dataset |
+
+After downloading, place in `data/`:
+
+```
+DuetGuard/data/
+├── coco/train2017/       # COCO 2017 train
+├── coco/val2017/         # COCO 2017 val
+├── aigc_test/
+├── casia2/
+└── columbia/
+```
 
 ---
 
@@ -83,19 +110,35 @@ bash run_supplement_experiments.sh
 
 ### Ablation Study
 
-![Ablation](results/figures/ablation.png)
+| Configuration | Accuracy |
+|:---|---:|
+| Watermark Only (P0) | 50.0% |
+| SPN Only (No Finetune) | 50.6% |
+| **DuetGuard (P3)** | **99.4%** |
 
 ### Confusion Matrix
 
-![Confusion Matrix](results/figures/confusion.png)
+|  | Pred: Auth | Pred: Susp | Pred: Forg |
+|---|:---:|:---:|:---:|
+| **GT: Authentic** | 399 | 0 | 1 |
+| **GT: Suspicious** | 0 | 0 | 0 |
+| **GT: Forgery** | 5 | 0 | 395 |
 
 ### Robustness
 
-![Robustness](results/figures/robustness.png)
+| Attack | Accuracy |
+|:---|---:|
+| Clean | 99.0% |
+| JPEG q=70 | 94.8% |
+| JPEG q=50 | 90.8% |
+| JPEG q=30 | 85.2% |
+| JPEG q=15 | 53.5% |
+| Gaussian σ=0.01 | 99.8% |
+| Gaussian σ=0.05 | 87.0% |
+| Gaussian σ=0.10 | 76.2% |
+| Gaussian σ=0.20 | 64.2% |
 
 ### Zero-Shot Generalization
-
-![Zero-Shot](results/figures/zero_shot.png)
 
 | Dataset | Samples | Accuracy |
 |:---|---:|---:|
@@ -112,6 +155,8 @@ bash run_supplement_experiments.sh
 ---
 
 ## 🧠 Architecture
+
+![DuetGuard Architecture](fig/architecture.png)
 
 ```
 Input (256×256×3)

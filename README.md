@@ -37,16 +37,7 @@ All datasets used in the paper (except COCO) are available at:
 
 **COCO dataset:** Download from [https://cocodataset.org](https://cocodataset.org) (`train2017` and `val2017`).
 
-After downloading, place in `data/`:
-
-| Content | Description |
-|---------|-------------|
-| `aigc_test/` | AIGC-generated test set (SD Inpaint) |
-| `casia2/` | CASIA v2 forensic benchmark (splicing, copy-move) |
-| `coco_mini/` | COCO 2017 subset for training |
-| `columbia/` | Columbia splicing dataset |
-
-After downloading, place in `data/`:
+Directory structure:
 
 ```
 DuetGuard/data/

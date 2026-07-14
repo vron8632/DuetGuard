@@ -16,11 +16,17 @@
 
 ---
 
+<p align="center">
+  <img src="fig/architecture.jpg" alt="DuetGuard Architecture" width="85%">
+</p>
+
+---
+
 ## 📦 Datasets
 
 All datasets used in the paper are available at:  
 **Baidu NetDisk:** https://pan.baidu.com/s/1tWSeEi1dOG7oZjLSguI0Xw  
-**Extraction code:** `bkww`
+**Password:** `bkww`
 
 | Content | Description |
 |---------|-------------|
@@ -154,18 +160,6 @@ bash run_supplement_experiments.sh
 
 ---
 
-## 🧠 Architecture
-
-![DuetGuard Architecture](fig/architecture.png)
-
-```
-Input (256×256×3)
-  ├── 🔵 Active (OmniGuard, frozen) → f_active (192D) + quality (1)
-  ├── 🟢 Passive (SPN CNN, 268K)    → f_spn (128D) + σ_pce (1)
-  └── 🔄 Fusion MLP (50K params)    → 3-class verdict + uncertainty
-```
-
-**Total:** 318K trainable params | **Speed:** ~18ms/image (RTX 4060 Ti)
 
 ---
 
@@ -196,11 +190,3 @@ DuetGuard/
 
 ---
 
-## 📝 Citation
-
-```bibtex
-@misc{duetguard2027,
-  title={DuetGuard: Dual-Branch Active-Passive Fusion for Robust AI-Generated Content Detection},
-  year={2027}
-}
-```

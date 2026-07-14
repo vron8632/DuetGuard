@@ -45,6 +45,7 @@ DuetGuard/data/
 ├── coco/val2017/         # COCO 2017 val
 ├── aigc_test/
 ├── casia2/
+├── coco_mini/            # COCO 2017 subset (from Baidu)
 └── columbia/
 ```
 
